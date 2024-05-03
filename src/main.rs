@@ -37,7 +37,7 @@ async fn create_schema(db_url:&str) -> Result<SqliteQueryResult, sqlx::Error>{
 
 #[async_std::main]
 async fn main() {
-    println!("Hello, Im changed");
+    println!("Hello, Im changed2");
     let db_url = String::from("sqlite://sqlite.db");
     if !Sqlite::database_exists(&db_url).await.unwrap_or(false){
         Sqlite::create_database(&db_url).await.unwrap();
